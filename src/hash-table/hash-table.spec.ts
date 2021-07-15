@@ -14,4 +14,16 @@ describe("Hash Table", () => {
 
        expect(hashTable.get('eXist')).toBe('value2');
    });
+
+    it('should delete item from hash tabke', () => {
+        const hashTable = new HashTable<string>(10);
+
+        hashTable.set('exist', 'value');
+
+        expect(hashTable.get('exist')).toBe('value');
+
+        hashTable.delete('exist');
+
+        expect(hashTable.get('exist')).toBeUndefined();
+    });
 });

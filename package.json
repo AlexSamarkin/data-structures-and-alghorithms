@@ -1,13 +1,14 @@
 {
   "name": "data-structures",
   "version": "1.0.0",
+  "private": true,
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex Samarkin<alexgui@yandex.ru>",
   "license": "ISC",
   "dependencies": {
     "crc-32": "^1.2.0"
