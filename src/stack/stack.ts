@@ -1,7 +1,7 @@
 export class Stack<T> {
     private items: T[] = [];
-    private mins: T[];
-    private maxs: T[];
+    private readonly mins: T[];
+    private readonly maxs: T[];
     private _cmpFunction: (a: T, b: T) => boolean;
 
     public length() {
@@ -50,6 +50,10 @@ export class Stack<T> {
 
     public max(): T | null {
         return this.maxs[this.maxs.length - 1] ?? null;
+    }
+
+    public toArray(): T[] {
+        return this.items;
     }
 
     set cmpFunction(fn: (a: T, b: T) => boolean) {

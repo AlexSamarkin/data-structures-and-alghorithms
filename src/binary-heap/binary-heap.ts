@@ -9,6 +9,10 @@ export abstract class BinaryHeap {
         return this.items;
     }
 
+    public root(): number | null {
+        return this.items[0] ?? null;
+    }
+
     protected swap(indexToSwap: number, swappingIndex: number): void {
         if (!this.items[indexToSwap] || !this.items[swappingIndex]) {
             throw new Error('Wrong index provided');
